@@ -9,13 +9,14 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Logo & Tagline */}
           <div className="flex flex-col items-center md:items-start">
-            <img
-              src="/images/fulllogo_transparent_nobuffer.png"
-              alt="Me, Myself Plus AI"
-              className="h-12 w-auto mb-2"
-            />
+            <div className="text-2xl font-bold mb-2">
+              <span className="text-white">i</span>
+              <span className="text-azure">R</span>
+              <span className="text-white">human.</span>
+              <span className="text-amber">ai</span>
+            </div>
             <p className="text-gray-400 text-sm">
-              AI Solutions for Small Business
+              AI Solutions for Business
             </p>
           </div>
 
@@ -43,13 +44,13 @@ export const Footer: React.FC = () => {
 
           {/* Copyright */}
           <div className="text-gray-500 text-sm">
-            &copy; {currentYear} Me, Myself Plus AI. All rights reserved.
+            &copy; {currentYear} iRhuman.ai. All rights reserved.
           </div>
         </div>
 
-        {/* Nashville Badge */}
+        {/* Badge */}
         <div className="text-center mt-6 text-gray-500 text-xs">
-          Made with AI in Nashville, TN
+          Made with AI
         </div>
       </div>
     </footer>

@@ -22,6 +22,17 @@ export default {
           light: '#f57c00',
           dark: '#bf360c',
         },
+        // iRhuman.ai brand colors
+        azure: {
+          DEFAULT: '#0091EA',
+          light: '#40C4FF',
+          dark: '#0077C2',
+        },
+        amber: {
+          DEFAULT: '#FFB300', // 55% yellow / 45% red-orange blend
+          light: '#FFCA28',
+          dark: '#FF8F00',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

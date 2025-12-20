@@ -4,7 +4,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Me, Myself + AI (M2AI) is a marketing/portfolio website showcasing AI solutions for businesses. Built with React 19, TypeScript, Vite, and Tailwind CSS. Deployed to Netlify.
+**iRhuman.ai** is a marketing/portfolio website showcasing AI solutions for businesses. Forked from M2AI_Web2.0 as an independent brand variation. Built with React 19, TypeScript, Vite, and Tailwind CSS.
+
+## Brand Identity
+
+Logo text styling: **iRhuman.ai**
+- `i` - white (#FFFFFF)
+- `R` - azure blue (#0091EA)
+- `human.` - white (#FFFFFF)
+- `ai` - amber (#FFB300 - 55% yellow / 45% red-orange blend)
+
+Brand colors defined in `tailwind.config.js` as `azure` and `amber`.
 
 ## Commands
 

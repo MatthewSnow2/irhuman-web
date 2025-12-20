@@ -73,13 +73,18 @@ export const FuturisticHero: React.FC<FuturisticHeroProps> = ({ onAuditClick }) 
           </span>
         </motion.div>
 
-        {/* Main heading */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight">
-          <AnimatedText text="Me, Myself" delay={0.4} />
-          <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal via-teal-light to-orange">
-            <AnimatedText text="+ AI" delay={0.8} />
-          </span>
+        {/* Main heading - iRhuman.ai branding */}
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight">
+          <motion.span
+            initial={{ opacity: 0, y: 20, filter: 'blur(10px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            transition={{ duration: 0.6, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+          >
+            <span className="text-white">i</span>
+            <span className="text-azure">R</span>
+            <span className="text-white">human.</span>
+            <span className="text-amber">ai</span>
+          </motion.span>
         </h1>
 
         {/* Subtitle */}
