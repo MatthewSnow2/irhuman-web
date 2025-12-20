@@ -1,9 +1,11 @@
 [build]
   publish = "dist"
-  command = "npm run build"
+  command = "npm ci && npm run build"
 
 [build.environment]
   NODE_VERSION = "18"
+  # Install all deps including devDependencies before setting NODE_ENV
+  NPM_FLAGS = "--include=dev"
 
 [context.production.environment]
   NODE_ENV = "production"
