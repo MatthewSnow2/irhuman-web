@@ -146,7 +146,7 @@ function Framing() {
         <div>
           <p className="text-sm text-gray-600 font-mono mb-3">In numbers</p>
           <p className="text-lg text-gray-300 leading-relaxed">
-            Eight research agents scanning markets daily. A six-dimension scoring engine triaging every idea. An autonomous build engine that commits code to feature branches. A quality ratchet that only tightens, never loosens. A self-improvement loop that patches its own configuration.
+            Ten research agents scanning markets daily. A six-dimension scoring engine triaging every idea. An autonomous build engine that commits code to feature branches. A quality ratchet that only tightens, never loosens. A self-improvement loop that patches its own agents and configuration. A watchdog that monitors health every fifteen minutes and dispatches diagnostics autonomously.
           </p>
           <p className="text-base text-gray-500 mt-4">
             Total human engineering time per build: zero.
@@ -210,12 +210,13 @@ function Story() {
 // --- Architecture ---
 function Architecture() {
   const components = [
-    { name: 'Research Agents', role: 'Signal Intelligence', description: '8 agents scanning ArXiv, GitHub, HN, YouTube, and custom domains daily. Multi-LLM for anti-monoculture signal diversity.', color: 'text-blue-400' },
-    { name: 'IdeaForge', role: 'Opportunity Scoring', description: '6-dimension scoring engine: opportunity, problem clarity, feasibility, timing, competition, and factory fit. Twice-daily evaluation via cron.', color: 'text-purple-400' },
-    { name: 'Metroplex', role: 'Autonomy Coordinator', description: '5 quality gates, priority queue, automatic retry with exponential backoff, budget enforcement, circuit breakers. The brain of the operation.', color: 'text-teal-400' },
-    { name: 'YCE Harness', role: 'Build Engine', description: 'Multi-agent autonomous builder. Orchestrator dispatches to specialist agents. Parallel execution via git worktrees. Code lands on feature branches.', color: 'text-orange-400' },
-    { name: 'Sky-Lynx', role: 'Self-Improvement', description: 'Analyzes build outcomes, correlates quality scores, recommends configuration patches. Writes improvement tasks back into the pipeline.', color: 'text-green-400' },
-    { name: 'ST Records', role: 'Institutional Memory', description: 'Persona metrics, outcome records, contract store, patch management. Every pipeline run writes a structured result. Nothing is forgotten.', color: 'text-yellow-400' },
+    { name: 'Research Agents', role: 'Signal Intelligence', description: '10+ agents scanning ArXiv, GitHub, HN, YouTube, Reddit, Product Hunt, and custom domains daily. Multi-LLM for anti-monoculture signal diversity. 2,500+ signals ingested.', color: 'text-blue-400' },
+    { name: 'IdeaForge', role: 'Opportunity Scoring', description: '6-dimension scoring engine with buildability filter and reality check enrichment. Twice-daily evaluation via cron. 197 ideas scored and classified.', color: 'text-purple-400' },
+    { name: 'Metroplex', role: 'Autonomy Coordinator', description: '4 gates (triage, build, publish, patch), priority queue, automatic retry, budget hard-stop enforcement, circuit breakers. 57,000+ cycles run autonomously.', color: 'text-teal-400' },
+    { name: 'YCE Harness', role: 'Build Engine', description: 'Multi-agent autonomous builder. Orchestrator dispatches to specialist agents. Parallel execution via git worktrees. 38 projects published to GitHub.', color: 'text-orange-400' },
+    { name: 'Sky-Lynx', role: 'Self-Improvement', description: 'Semi-weekly analysis with auto-apply. Correlates quality scores, recommends patches, tunes configuration. Writes improvement tasks back into the pipeline.', color: 'text-green-400' },
+    { name: 'Galvatron', role: 'Proactive Monitoring', description: 'Watchdog checks system health every 15 minutes. On warning or critical status, autonomously dispatches diagnostic missions and alerts via Telegram.', color: 'text-red-400' },
+    { name: 'ST Records', role: 'Institutional Memory', description: 'Persona metrics, 32,000+ outcome records, contract store, patch management. Every pipeline run writes a structured result. Nothing is forgotten.', color: 'text-yellow-400' },
   ];
 
   return (
@@ -244,6 +245,9 @@ function Architecture() {
           <p>{"            "}<span className="text-yellow-400">ST Records</span> {"←── outcome record"}</p>
           <p className="text-gray-700">{"                    │"}</p>
           <p>{"            "}<span className="text-green-400">Sky-Lynx</span> {"←── observes, improves, repeats"}</p>
+          <p className="text-gray-700">{""}</p>
+          <p className="text-gray-600"># Proactive health monitoring</p>
+          <p>{"            "}<span className="text-red-400">Galvatron</span> {"──── watchdog every 15m ────→ auto-diagnose + alert"}</p>
         </div>
       </div>
 
@@ -266,11 +270,11 @@ function Architecture() {
 // --- Results ---
 function Results() {
   const stats = [
-    { value: '578+', label: 'Tests Passing', sublabel: 'Metroplex alone' },
-    { value: '8', label: 'Research Agents', sublabel: 'Daily signal scanning' },
-    { value: '12+', label: 'Completed Builds', sublabel: 'Autonomous, no human touch' },
-    { value: '~3.8', label: 'L5 Score', sublabel: 'Out of 5.0 (up from 3.2)' },
-    { value: '6', label: 'Quality Dimensions', sublabel: 'IdeaForge scoring' },
+    { value: '57K+', label: 'Autonomous Cycles', sublabel: 'Metroplex orchestration' },
+    { value: '10+', label: 'Research Agents', sublabel: 'Daily signal scanning' },
+    { value: '38', label: 'Projects Published', sublabel: 'To GitHub, no human touch' },
+    { value: '4.0', label: 'L5 Score', sublabel: 'Out of 5.0 (up from 3.2)' },
+    { value: '32K+', label: 'Outcome Records', sublabel: 'Continuous pipeline telemetry' },
     { value: '0', label: 'Human Lines of Code', sublabel: 'Per autonomous build' },
   ];
 
