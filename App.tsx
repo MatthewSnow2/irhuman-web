@@ -45,7 +45,7 @@ function Nav() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#0a0e1a]/95 backdrop-blur-md border-b border-gray-800/50' : ''}`}>
       <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#" className="font-mono text-sm tracking-wider text-gray-400 hover:text-white transition-colors">
-          SNOW-TOWN
+          ST METRO
         </a>
         <div className="hidden md:flex items-center gap-8 text-sm text-gray-500">
           <a href="#framing" className="hover:text-white transition-colors">Framing</a>
@@ -71,16 +71,16 @@ function Hero() {
 
   return (
     <div ref={containerRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Subtle grid background */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
-        backgroundSize: '60px 60px'
-      }} />
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-teal-500/5 rounded-full blur-3xl" />
+      {/* Hero background image */}
+      <div className="absolute inset-0">
+        <img src="/images/hero-bg.jpg" alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-[#0a0e1a]/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e1a] via-transparent to-[#0a0e1a]/80" />
+      </div>
 
       <motion.div style={{ opacity, y }} className="relative z-10 max-w-3xl mx-auto px-6 text-center">
         <p className="font-mono text-xs tracking-[0.3em] uppercase text-teal-400 mb-8">
-          Snow-Town &middot; ST Metro
+          ST Metro
         </p>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-8">
           The Autonomous
@@ -222,6 +222,12 @@ function Architecture() {
     <Section id="architecture" className="max-w-3xl mx-auto px-6 py-24">
       <h2 className="font-mono text-xs tracking-[0.3em] uppercase text-teal-400 mb-4">Architecture</h2>
       <p className="text-gray-500 mb-12">Three input streams. One priority queue. Autonomous execution.</p>
+
+      {/* Visual: pipeline convergence */}
+      <div className="relative rounded-2xl overflow-hidden mb-12">
+        <img src="/images/architecture-bg.jpg" alt="Data pipeline visualization — multiple input streams converging through a central processing node to output endpoints" className="w-full h-48 md:h-64 object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e1a] via-transparent to-transparent" />
+      </div>
 
       {/* Flow diagram */}
       <div className="my-12 p-6 rounded-xl bg-[#111827] border border-gray-800 font-mono text-sm">
@@ -379,8 +385,8 @@ function Footer() {
   return (
     <footer className="border-t border-gray-800/40 py-8 px-6 mt-12">
       <div className="max-w-3xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
-        <span className="font-mono tracking-wider">SNOW-TOWN &middot; ST METRO</span>
-        <span>&copy; {new Date().getFullYear()} Snow-Town. All rights reserved.</span>
+        <span className="font-mono tracking-wider">ST METRO</span>
+        <span>&copy; {new Date().getFullYear()} ST Metro. All rights reserved.</span>
       </div>
     </footer>
   );
